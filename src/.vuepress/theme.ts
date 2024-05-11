@@ -4,11 +4,11 @@ import sidebar from "./sidebar.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://vue.blog.w1ndys.top",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "W1ndys",
+    url: "https://vue.blog.w1ndys.top",
   },
 
   iconAssets: "fontawesome-with-brands",
@@ -19,6 +19,12 @@ export default hopeTheme({
 
   docsDir: "src",
 
+  // 深色模式
+
+  darkmode: "switch",
+
+  // 全屏模式
+  fullscreen: true,
   // 导航栏
   navbar,
 
@@ -28,6 +34,16 @@ export default hopeTheme({
   // 页脚
   footer: "默认页脚",
   displayFooter: true,
+
+  // 左右位置互换
+  locales: {
+    "/": {
+      rtl: false,
+    },
+  },
+
+  // 纯净模式
+  pure: false,
 
   // 博客相关
   blog: {
@@ -86,6 +102,11 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+    prismjs: {
+      light: "ateliersulphurpool-light",
+      dark: "atom-dark",
+    },
+
     blog: true,
 
     // 启用之前需安装 @waline/client
